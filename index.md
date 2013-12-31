@@ -1,6 +1,6 @@
 ---
 layout: page
-title: GamingRobot's
+title: Morgan Creekmore's
 tagline: Blog Thing
 ---
 {% include JB/setup %}
