@@ -54,7 +54,7 @@ Time to test everything is working.
 
     stop:   b stop               @ Infinite loop to stop execution
 
-### Assemble, Link, Build binary
+### Assemble, Link, Build
 
     $ arm-linux-gnueabi-as -o helloarm.o helloarm.s
     $ arm-linux-gnueabi-ld -o helloarm.elf helloarm.o
