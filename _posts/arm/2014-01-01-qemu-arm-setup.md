@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Setup QEMU for ARM on Wheezy
+category: embedded
 tags : [qemu, arm, debian, wheezy]
 ---
 {% include JB/setup %}
