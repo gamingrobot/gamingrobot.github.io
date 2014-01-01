@@ -1,12 +1,13 @@
 ---
 layout: post
-title: Setup Qemu for ARM on Wheezy
+title: Setup QEMU for ARM on Wheezy
 tags : [qemu, arm, debian, wheezy]
 ---
 {% include JB/setup %}
 
-This is a quick little blog post for how to install Qemu for ARM on Debian 7.0(Wheezy).
+This is a quick little blog post for how to install QEMU for ARM on Debian 7.0(Wheezy).
 
+---
 ## Installing Toolchains
 
 Edit /etc/apt/sources.list and add
@@ -26,13 +27,13 @@ Install ARM toolchains
     # apt-get install linux-libc-dev-armel-cross libc6-armel-cross libc6-dev-armel-cross binutils-arm-linux-gnueabi gcc-4.4-arm-linux-gnueabi g++-4.4-arm-linux-gnueabi
 
 ---
-## Installing Qemu
+## Installing QEMU
 
-Install Qemu
+Install QEMU
 
     # apt-get install qemu qemu-user-static
 
-Optional: Install Qemu GUI
+Optional: Install QEMU GUI
 
     # apt-get install aqemu
 
@@ -64,7 +65,7 @@ Time to test everything is working.
     $ dd if=/dev/zero of=flash.bin bs=4096 count=4096
     $ dd if=helloarm.bin of=flash.bin bs=4096 conv=notrunc
 
-### Launch Qemu
+### Launch QEMU
 
     $ qemu-system-arm -M connex -pflash flash.bin -nographic -serial /dev/null
 

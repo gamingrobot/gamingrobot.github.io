@@ -24,6 +24,8 @@ author :
 #
 production_url : http://blog.gamingrobot.net
 
+excerpt_separator: "---"
+
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
 JB :
