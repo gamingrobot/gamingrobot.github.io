@@ -1,5 +1,6 @@
 ---
 layout: post
+category : arm
 title: Setup QEMU for ARM on Wheezy
 tags : [qemu, arm, debian, wheezy]
 ---
