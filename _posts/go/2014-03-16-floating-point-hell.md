@@ -91,4 +91,4 @@ console.log(JSON.parse(data))
 //Output
 Object {Id: "12345678901234567892", BigNum: "12000000000002539"}
 {% endhighlight %}
-Now in JavaScript number is properly represented because they are strings.
+Now in JavaScript the number is properly represented because they are strings.
