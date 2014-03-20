@@ -22,12 +22,12 @@ type LargeId uint64
 
 type Data struct {
     Id      LargeId
-    LargeNum int64
+    BigNum int64
 }
 {% endhighlight %}
 Encode and Decode data
 {% highlight go %}
-data := Data{Id: 12345678901234567892, LargeNum: 12000000000002539}
+data := Data{Id: 12345678901234567892, BigNum: 12000000000002539}
 output, _ := json.Marshal(data)
 fmt.Println("Data -> Json", string(output))
 input := string(output)
@@ -36,17 +36,17 @@ json.Unmarshal([]byte(input), &output2)
 fmt.Printf("Json -> Data %+v\n", output2)
 
 //Output
-Data -> Json {"Id":12345678901234567892,"LargeNum":12000000000002539}
-Json -> Data {Id:12345678901234567892 LargeNum:12000000000002539}
+Data -> Json {"Id":12345678901234567892,"BigNum":12000000000002539}
+Json -> Data {Id:12345678901234567892 BigNum:12000000000002539}
 {% endhighlight %}
 
 ## JavaScript
 {% highlight javascript %}
-var data = '{"Id":12345678901234567892,"LargeNum":12000000000002539}'
+var data = '{"Id":12345678901234567892,"BigNum":12000000000002539}'
 console.log(JSON.parse(data))
 
 //Output
-Object {Id: 12345678901234567000, LargeNum: 12000000000002540}
+Object {Id: 12345678901234567000, BigNum: 12000000000002540}
 {% endhighlight %}
 
 ---
@@ -62,13 +62,13 @@ type LargeId uint64
 
 type Data struct {
     Id      LargeId `json:",string"`
-    LargeNum int64  `json:",string"`
+    BigNum int64  `json:",string"`
 }
 {% endhighlight %}
 Encode and Decode data
 
 {% highlight go %}
-data := Data{Id: 12345678901234567892, LargeNum: 12000000000002539}
+data := Data{Id: 12345678901234567892, BigNum: 12000000000002539}
 output, _ := json.Marshal(data)
 fmt.Println("Data -> Json", string(output))
 input := string(output)
@@ -77,18 +77,18 @@ json.Unmarshal([]byte(input), &output2)
 fmt.Printf("Json -> Data %+v\n", output2)
 
 //Output
-Data -> Json {"Id":"12345678901234567892","LargeNum":"12000000000002539"}
-Json -> Data {Id:12345678901234567892 LargeNum:12000000000002539}
+Data -> Json {"Id":"12345678901234567892","BigNum":"12000000000002539"}
+Json -> Data {Id:12345678901234567892 BigNum:12000000000002539}
 {% endhighlight %}
 
 With the tag we can encode and decode the Json and keep the int64 type internally.
 
 ## JavaScript
 {% highlight javascript %}
-var data = '{"Id":"12345678901234567892","LargeNum":"12000000000002539"}'
+var data = '{"Id":"12345678901234567892","BigNum":"12000000000002539"}'
 console.log(JSON.parse(data))
 
 //Output
-Object {Id: "12345678901234567892", LargeNum: "12000000000002539"}
+Object {Id: "12345678901234567892", BigNum: "12000000000002539"}
 {% endhighlight %}
 Now on the JavaScript end the number is properly represented because they are kept as strings.
