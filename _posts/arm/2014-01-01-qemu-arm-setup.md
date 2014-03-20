@@ -20,23 +20,31 @@ The sqeeze repo is for the package `libgmp3c2` that is unavailable on wheezy.
 
 Install the emdebian public key
 
-    # apt-get install emdebian-archive-keyring
-    # apt-get update
+{% highlight console %}
+# apt-get install emdebian-archive-keyring
+# apt-get update
+{% endhighlight %}
 
 Install ARM toolchains
 
-    # apt-get install linux-libc-dev-armel-cross libc6-armel-cross libc6-dev-armel-cross binutils-arm-linux-gnueabi gcc-4.4-arm-linux-gnueabi g++-4.4-arm-linux-gnueabi
+{% highlight console %}
+# apt-get install linux-libc-dev-armel-cross libc6-armel-cross libc6-dev-armel-cross binutils-arm-linux-gnueabi gcc-4.4-arm-linux-gnueabi g++-4.4-arm-linux-gnueabi
+{% endhighlight %}
 
 ---
 ## Installing QEMU
 
 Install QEMU
 
-    # apt-get install qemu qemu-user-static
+{% highlight console %}
+# apt-get install qemu qemu-user-static
+{% endhighlight %}
 
 Optional: Install QEMU GUI
 
-    # apt-get install aqemu
+{% highlight console %}
+# apt-get install aqemu
+{% endhighlight %}
 
 ---
 ## Hello ARM
@@ -45,30 +53,37 @@ Time to test everything is working.
 
 `helloarm.s`
 
-    .text
- 
-    .globl _start
-    _start:
-            mov   r0, #5         @ Load register r0 with the value 5
-            mov   r1, #4         @ Load register r1 with the value 4
-            add   r2, r1, r0     @ Add r0 and r1 and store in r2
+{% highlight asm %}
+.text
+.globl _start
+_start:
+        mov   r0, #5         @ Load register r0 with the value 5
+        mov   r1, #4         @ Load register r1 with the value 4
+        add   r2, r1, r0     @ Add r0 and r1 and store in r2
 
-    stop:   b stop               @ Infinite loop to stop execution
+stop:   b stop               @ Infinite loop to stop execution
+{% endhighlight %}
 
 ### Assemble, Link, Build
 
-    $ arm-linux-gnueabi-as -o helloarm.o helloarm.s
-    $ arm-linux-gnueabi-ld -o helloarm.elf helloarm.o
-    $ arm-linux-gnueabi-objcopy -O binary helloarm.elf helloarm.bin
+{% highlight console %}
+$ arm-linux-gnueabi-as -o helloarm.o helloarm.s
+$ arm-linux-gnueabi-ld -o helloarm.elf helloarm.o
+$ arm-linux-gnueabi-objcopy -O binary helloarm.elf helloarm.bin
+{% endhighlight %}
 
 ### Setup flash.bin
 
-    $ dd if=/dev/zero of=flash.bin bs=4096 count=4096
-    $ dd if=helloarm.bin of=flash.bin bs=4096 conv=notrunc
+{% highlight console %}
+$ dd if=/dev/zero of=flash.bin bs=4096 count=4096
+$ dd if=helloarm.bin of=flash.bin bs=4096 conv=notrunc
+{% endhighlight %}
 
 ### Launch QEMU
 
-    $ qemu-system-arm -M connex -pflash flash.bin -nographic -serial /dev/null
+{% highlight console %}
+$ qemu-system-arm -M connex -pflash flash.bin -nographic -serial /dev/null
+{% endhighlight %}
 
 There should now be a `(qemu)` prompt, type `info registers` and should see something like this
 
