@@ -40,6 +40,9 @@ Data -> Json {"Id":12345678901234567892,"BigNum":12000000000002539}
 Json -> Data {Id:12345678901234567892 BigNum:12000000000002539}
 {% endhighlight %}
 
+As you can see Go has no problem encoding and decoding the large integers.
+But lets see what happens when JavaScript tries to decode the same integers.
+
 ## JavaScript
 {% highlight javascript %}
 var data = '{"Id":12345678901234567892,"BigNum":12000000000002539}'
@@ -48,6 +51,15 @@ console.log(JSON.parse(data))
 //Output
 Object {Id: 12345678901234567000, BigNum: 12000000000002540}
 {% endhighlight %}
+
+JavaScript ended up decoding the number, but its wrong.
+But if we check for equivalence in JavaScript it returns true.
+
+{% highlight javascript %}
+> 12000000000002539 === 12000000000002540
+true
+{% endhighlight %}
+
 
 ---
 # How to fix it
