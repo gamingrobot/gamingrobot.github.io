@@ -11,6 +11,7 @@ JavaScript has 53-bits of integer precision, this is a problem when trying to re
 Ways of solving this in JavaScript is to use [bigint](http://www.khjk.org/log/2010/nov/jsbigint.html) or [math.Long](http://docs.closure-library.googlecode.com/git/class_goog_math_Long.html), but when parsing Json we can't use this.
 
 ---
+
 # When it goes wrong
 This is a example of how it can go wrong.
 Go encodes the Json properly, but when parsed by JavaScript the number does not match.
@@ -62,8 +63,8 @@ true
 
 
 ---
-# How to fix it
 
+# How to fix it
 The easiest way to fix this is to encode the int64 to a string, that way when parsed in JavaScript the number is properly represented.
 Below I have added `json:",string"` tag to the end of every int64, this tells the `encoding/json` package to encode that field as a string instead of a integer.
 

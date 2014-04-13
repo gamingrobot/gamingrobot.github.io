@@ -9,8 +9,8 @@ tags : [qemu, arm, debian, wheezy]
 This is a quick little blog post for how to install QEMU for ARM on Debian 7.0(Wheezy).
 
 ---
-## Installing Toolchains
 
+## Installing Toolchains
 Edit /etc/apt/sources.list and add
     
     deb http://emdebian.org/debian/ stable main
@@ -32,8 +32,8 @@ Install ARM toolchains
 {% endhighlight %}
 
 ---
-## Installing QEMU
 
+## Installing QEMU
 Install QEMU
 
 {% highlight console %}
@@ -47,8 +47,8 @@ Optional: Install QEMU GUI
 {% endhighlight %}
 
 ---
-## Hello ARM
 
+## Hello ARM
 Time to test everything is working.
 
 `helloarm.s`
@@ -64,23 +64,20 @@ _start:
 stop:   b stop               @ Infinite loop to stop execution
 {% endhighlight %}
 
-### Assemble, Link, Build
-
+Assemble, Link, Build
 {% highlight console %}
 $ arm-linux-gnueabi-as -o helloarm.o helloarm.s
 $ arm-linux-gnueabi-ld -o helloarm.elf helloarm.o
 $ arm-linux-gnueabi-objcopy -O binary helloarm.elf helloarm.bin
 {% endhighlight %}
 
-### Setup flash.bin
-
+Setup flash.bin
 {% highlight console %}
 $ dd if=/dev/zero of=flash.bin bs=4096 count=4096
 $ dd if=helloarm.bin of=flash.bin bs=4096 conv=notrunc
 {% endhighlight %}
 
-### Launch QEMU
-
+Launch QEMU
 {% highlight console %}
 $ qemu-system-arm -M connex -pflash flash.bin -nographic -serial /dev/null
 {% endhighlight %}
