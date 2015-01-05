@@ -1,14 +1,19 @@
 <!doctype html>
 <html>
   <head>
+    <script type="text/javascript">
+      var enforce = "gamingrobot.net";
+      if ((enforce == window.location.host) && (window.location.protocol != "https:"))
+        window.location = window.location.toString().replace(/^http:/, "https:");
+    </script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Morgan Creekmore</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link rel="stylesheet" href="assets/stylesheets/styles.css">
+    <link rel="stylesheet" href="assets/stylesheets/pygment_trac.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <script src='javascripts/jquery.simplemodal.js'></script>
+    <script src="assets/javascripts/respond.js"></script>
+    <script src='assets/javascripts/jquery.simplemodal.js'></script>
     <script type='text/javascript'>
     jQuery(function ($) {
       // Load dialog on click
@@ -46,12 +51,12 @@
           <h1>Morgan Creekmore</h1>
           <p>Projects and Personal Website</p>
           <hr>
-          <span class="links"><a href="https://github.com/gamingrobot">GitHub</a>  <a href="http://blog.gamingrobot.net">Blog</a> <a href="https://twitter.com/gamingrobot">Twitter</a>  <a href="" class="contact-button">Contact</a> </span>
+          <span class="links"><a href="https://github.com/gamingrobot">GitHub</a>  <a href="https://gamingrobot.net/blog/">Blog</a> <a href="https://twitter.com/gamingrobot">Twitter</a>  <a href="" class="contact-button">Contact</a> </span>
         </div>
 
         <!--ginux-->
         <h1>ginux</h1>
-          <p><img src="images/projects/ginux.png"/></p>
+          <p><img src="project_images/ginux.png"/></p>
           <p>Linux in a browser, uses websockets to communicate with a virtual machine that runs a Linux Kernel with BusyBox. It uses term.js in the browser to emulate a xterm interface to the virtual machine.</p>
 
           <p>
@@ -64,7 +69,7 @@
 
         <!--three-gravity-->
         <h1>three-gravity</h1>
-          <p><img src="images/projects/three-gravity.png"/></p>
+          <p><img src="project_images/three-gravity.png"/></p>
           <p>A gravity particle simulation in <a href="http://threejs.org/">three.js</a>.</p>
 
           <p>
@@ -87,7 +92,7 @@
 
         <!--Source Player List-->
         <h1>Source Player List</h1>
-          <p><img src="images/projects/source-player-list.png"/></p>
+          <p><img src="project_images/source-player-list.png"/></p>
           <p>Source Player List is a replacement for the players list in steam. It pulls data from gameME to display the servers and players.</p>
 
           <p>
@@ -99,7 +104,7 @@
 
         <!--PPRA-->
         <h1>PPRA</h1>
-          <p><img src="images/projects/ppra.png"/></p>
+          <p><img src="project_images/ppra.png"/></p>
           <p>High School senior project for a mind controlled robotic arm, using <a href="http://emotiv.com/">Emotiv</a> Headset and homemade robotic arm.</p>
 
           <p>
