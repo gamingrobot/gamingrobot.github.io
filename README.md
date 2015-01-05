@@ -1,2 +1,2 @@
-# Blog Thing
-http://blog.gamingrobot.net/
+# Website
+http://gamingrobot.net
