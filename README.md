@@ -1,2 +1,2 @@
-# Website
+# Projects
 https://morgancreekmore.me
