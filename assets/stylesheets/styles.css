@@ -613,10 +613,43 @@ strong {
 }
 
 .wrapper {
-  max-width: 650px;
   margin: 0 auto;
   position: relative;
   padding: 0 20px;
+}
+
+@media only screen and (min-width: 1381px), and (min-device-width: 1381px) {
+  .wrapper {
+    max-width: 1380px;
+  }
+
+  .projects {
+    float:left;
+    width:650px;
+  }
+
+  .contributions {
+    float:right;
+    width:650px;
+  }
+}
+
+@media only screen and (max-width: 1380px), and (max-device-width: 1380px) {
+  .wrapper {
+    max-width: 650px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 20px;
+  }
+
+  .projects {
+    clear:both;
+  }
+
+  .contributions {
+    clear:both;
+  }
+
 }
 
 section img {
@@ -789,7 +822,7 @@ dt {
 }
 
 section {
-  max-width: 650px;
+  /*max-width: 650px;*/
   padding: 30px 0px 50px 0px;
   margin: 20px 0;
   margin-top: 15px;
@@ -797,7 +830,7 @@ section {
 section #title {
   border: 0;
   outline: none;
-  margin: 0 0 50px 0;
+  margin: 0 0 20px 0;
   padding: 0 0 5px 0;
 }
 section #title h1 {
@@ -826,10 +859,11 @@ section #title .links {
 
 section #title .links a{
   display: table-cell;
-  width: 25%; /* (100 / numitems) */
+  width: 20%; /* (100 / numitems) */
 }
 
 section .credits {
+  clear:both;
   border: 0;
   outline: none;
   margin: 0 0 50px 0;
