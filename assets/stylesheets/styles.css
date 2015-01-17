@@ -620,9 +620,6 @@ strong {
 
 .wrapper.blog {
   max-width: 650px;
-  margin: 0 auto;
-  position: relative;
-  padding: 0 20px;
 }
 
 @media only screen and (min-width: 1381px), and (min-device-width: 1381px) {
