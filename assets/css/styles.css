@@ -831,30 +831,30 @@ section {
   margin: 20px 0;
   margin-top: 15px;
 }
-section #title {
+section .title {
   border: 0;
   outline: none;
   padding: 0 0 5px 0;
 }
-section #title h1 {
+section .title h1 {
   font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 40px;
   text-align: center;
-  margin: 0 auto 30px;
+  margin: 0 auto 20px;
 }
-section #title hr {
+section .title hr {
   margin: 15px 0 15px;
 
 }
-section #title p {
+section .title p {
   color: #d7cfbe;
   font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 18px;
   text-align: center;
 }
-section #title .links {
+section .title .links {
   width:100%;
   display: table;
   text-align:center;
@@ -865,9 +865,13 @@ section #title .links {
   margin: 0 auto;
 }
 
-section #title .links a{
+section .title .links a{
   display: table-cell;
   width: 20%; /* (100 / numitems) */
+}
+
+section .title #name{
+  margin: 0 0 40px;
 }
 
 section .credits {
