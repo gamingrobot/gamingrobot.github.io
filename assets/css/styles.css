@@ -740,7 +740,7 @@ dt {
 #simplemodal-overlay {background-color:#000;}
 
 /* Container */
-#simplemodal-container {height:200px; width:400px; color:#bbb; background-color:#333; border:4px solid #444; padding:12px;}
+#simplemodal-container {height:160px; width:350px; color:#bbb; background-color:#333; border:4px solid #444; padding:12px;}
 #simplemodal-container .simplemodal-data {padding:8px;}
 /*#simplemodal-container a {color:#ddd;}*/
 #simplemodal-container a.modalCloseImg {background:url(../images/x.png) no-repeat; width:25px; height:29px; display:inline; z-index:3200; position:absolute; top:-15px; right:-16px; cursor:pointer;}
@@ -834,7 +834,6 @@ section {
 section #title {
   border: 0;
   outline: none;
-  margin: 0 0 20px 0;
   padding: 0 0 5px 0;
 }
 section #title h1 {
@@ -842,6 +841,11 @@ section #title h1 {
   font-weight: normal;
   font-size: 40px;
   text-align: center;
+  margin: 0 auto 30px;
+}
+section #title hr {
+  margin: 15px 0 15px;
+
 }
 section #title p {
   color: #d7cfbe;
@@ -858,7 +862,7 @@ section #title .links {
   font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   color: #696969;
-  margin: -10px auto;
+  margin: 0 auto;
 }
 
 section #title .links a{

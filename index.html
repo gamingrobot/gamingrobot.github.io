@@ -9,15 +9,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Morgan Creekmore</title>
-    <link rel="stylesheet" href="assets/stylesheets/styles.css">
-    <link rel="stylesheet" href="assets/stylesheets/pygment_trac.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="assets/javascripts/respond.js"></script>
-    <script src='assets/javascripts/jquery.simplemodal.js'></script>
+    <script src="assets/js/respond.min.js"></script>
+    <script src='assets/js/jquery.simplemodal.min.js'></script>
     <script type='text/javascript'>
     jQuery(function ($) {
       // Load dialog on click
-      $('.contact-button').click(function (e) {
+      $('#contact-button').click(function (e) {
         $('#contact-content').modal();
         return false;
       });
@@ -25,9 +25,6 @@
     </script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <script>
@@ -57,11 +54,10 @@
       <section>
         <div id="title">
           <h1>Morgan Creekmore</h1>
-          <p>Personal Website</p>
           <hr>
-          <span class="links"><a href="https://github.com/gamingrobot">GitHub</a>  <a href="https://morgancreekmore.me/blog/">Blog</a>  <a href="https://www.linkedin.com/pub/morgan-creekmore/2b/65a/71a">LinkedIn</a> <a href="https://twitter.com/gamingrobot">Twitter</a> <a href="" class="contact-button">Contact</a> </span>
+          <div class="links"><a class="fa fa-github" href="https://github.com/gamingrobot"> GitHub</a><a class="fa fa-terminal" href="https://morgancreekmore.me/blog/"> Blog</a><a class="fa fa-twitter" href="https://twitter.com/gamingrobot"> Twitter</a><a class="fa fa-linkedin" href="https://www.linkedin.com/pub/morgan-creekmore/2b/65a/71a"> LinkedIn</a><a href="" id="contact-button" class="fa fa-envelope"> Contact</a> </div>
+          <hr>
         </div>
-        <hr>
 
         <div class="projects">
           <!-- projects -->
@@ -148,7 +144,7 @@
             </p>
           <hr>
         </div>
-        <span class="credits">Original Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
+        <span class="credits">Original Theme by <a href="https://github.com/mattgraham">mattgraham</a></span>
     </section>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
