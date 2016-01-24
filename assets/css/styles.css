@@ -327,15 +327,6 @@ dt {
   font-weight: normal;
 }
 
-/* Overlay */
-#simplemodal-overlay {background-color:#000;}
-
-/* Container */
-#simplemodal-container {height:160px; width:350px; color:#bbb; background-color:#333; border:4px solid #444; padding:12px;}
-#simplemodal-container .simplemodal-data {padding:8px;}
-/*#simplemodal-container a {color:#ddd;}*/
-#simplemodal-container a.modalCloseImg {background:url(../images/x.png) no-repeat; width:25px; height:29px; display:inline; z-index:3200; position:absolute; top:-15px; right:-16px; cursor:pointer;}
-/*#simplemodal-container h3 {color:#84b8d9;}*/
 
 section {
   /*max-width: 650px;*/
@@ -420,4 +411,35 @@ section .credits {
     padding: 10px;
     width: 100%;
   }
+}
+
+/* ==========================================================================
+   SimpleModal
+   ==========================================================================
+*/
+
+#simplemodal-overlay {
+  background-color:#000;
+}
+#simplemodal-container {
+  height:160px;
+  width:350px;
+  color:#bbb;
+  background-color:#333;
+  border:4px solid #444;
+  padding:12px;
+}
+#simplemodal-container .simplemodal-data {
+  padding:8px;
+}
+#simplemodal-container a.modalCloseImg {
+  background:url(../images/x.png) no-repeat; 
+  width:25px; 
+  height:29px; 
+  display:inline; 
+  z-index:3200; 
+  position:absolute; 
+  top:-15px; 
+  right:-16px; 
+  cursor:pointer;
 }
