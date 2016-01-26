@@ -168,7 +168,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 body {
   padding: 0px 0 20px 0px;
   margin: 0px;
-  font: 14px/1.5 "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 15px/1.5 "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #f0e7d5;
   font-weight: normal;
   background: #252525;
@@ -236,51 +236,7 @@ strong {
   font-weight: normal;
 }
 
-.wrapper {
-  margin: 0 auto;
-  position: relative;
-  padding: 0 20px;
-}
-
-.wrapper.blog {
-  max-width: 900px;
-}
-
-@media only screen and (min-width: 1381px), and (min-device-width: 1381px) {
-  .wrapper {
-    max-width: 1380px;
-  }
-
-  .projects {
-    float:left;
-    width:650px;
-  }
-
-  .contributions {
-    float:right;
-    width:650px;
-  }
-}
-
-@media only screen and (max-width: 1380px), and (max-device-width: 1380px) {
-  .wrapper {
-    max-width: 650px;
-    margin: 0 auto;
-    position: relative;
-    padding: 0 20px;
-  }
-
-  .projects {
-    clear:both;
-  }
-
-  .contributions {
-    clear:both;
-  }
-
-}
-
-section img {
+img {
   max-width: 100%;
 }
 
@@ -325,57 +281,83 @@ dt {
   font-weight: normal;
 }
 
-
-section {
-  /*max-width: 650px;*/
-  padding: 30px 0px 50px 0px;
-  margin: 20px 0;
+.wrapper {
+  margin: 20px auto;
+  position: relative;
+  padding: 30px 20px 50px 20px;
   margin-top: 15px;
 }
-section .title {
+
+@media only screen and (min-width: 1381px), and (min-device-width: 1381px) {
+  .wrapper {
+    max-width: 1380px;
+  }
+  .projects {
+    float:left;
+    width:650px;
+  }
+  .contributions {
+    float:right;
+    width:650px;
+  }
+}
+
+@media only screen and (max-width: 1380px), and (max-device-width: 1380px) {
+  .wrapper {
+    max-width: 650px;
+  }
+  .projects {
+    clear:both;
+  }
+  .contributions {
+    clear:both;
+  }
+}
+
+.title {
   border: 0;
   outline: none;
   padding: 0 0 5px 0;
 }
-section .title h1 {
+.title h1 {
   font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 40px;
   text-align: center;
   margin: 0 auto 20px;
 }
-section .title hr {
+.title hr {
   margin: 15px 0 15px;
 
 }
-section .title p {
+.title p {
   color: #d7cfbe;
   font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 18px;
   text-align: center;
 }
-section .title .links {
+.title .links {
   width:100%;
   display: table;
   text-align:center;
-  font-size: 14px;
+  font-size: 15px;
   font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   color: #696969;
   margin: 0 auto;
 }
 
-section .title .links a{
+.title .links a{
   display: table-cell;
   width: 20%; /* (100 / numitems) */
 }
 
-section .title #name{
-  margin: 0 0 40px;
+.title #name{
+  margin: 0 auto 40px;
 }
 
-section .credits {
+.credits {
   clear:both;
   border: 0;
   outline: none;
@@ -386,29 +368,6 @@ section .credits {
   font-weight: normal;
   color: #696969;
   float: right;
-}
-
-
-@media print, screen and (max-width: 480px) {
-  #header {
-    position: absolute;
-    height: auto;
-  }
-  #header nav {
-    width: 100%;
-    margin: 0px;
-    padding: 0 4px;
-  }
-  #header nav li.downloads, #header nav li.title {
-    display: none;
-  }
-  #header nav li, #header nav li.fork, #header nav a, #header nav li.fork a {
-    display: inline-block;
-    float: none;
-    margin: 0 auto;
-    padding: 10px;
-    width: 100%;
-  }
 }
 
 /* ==========================================================================
