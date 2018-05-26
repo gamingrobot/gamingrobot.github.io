@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Morgan Creekmore</title>
-    <link>http://example.org/posts/</link>
+    <link>https://morgancreekmore.me/posts/</link>
     <description>Recent content in Posts on Morgan Creekmore</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 16 Mar 2014 13:33:19 -0500</lastBuildDate>
     
-	<atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://morgancreekmore.me/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Floating Point Hell</title>
-      <link>http://example.org/posts/floating-point-hell/</link>
+      <link>https://morgancreekmore.me/posts/floating-point-hell/</link>
       <pubDate>Sun, 16 Mar 2014 13:33:19 -0500</pubDate>
       
-      <guid>http://example.org/posts/floating-point-hell/</guid>
+      <guid>https://morgancreekmore.me/posts/floating-point-hell/</guid>
       <description>&lt;p&gt;This blog post will show how to deal with floating point error in JavaScript by encoding all uint64&amp;rsquo;s, and int64&amp;rsquo;s to strings in the Json Marshaling.
 &lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Setup QEMU for ARM on Wheezy</title>
-      <link>http://example.org/posts/setup-qemu-for-arm-on-wheezy/</link>
+      <link>https://morgancreekmore.me/posts/setup-qemu-for-arm-on-wheezy/</link>
       <pubDate>Wed, 01 Jan 2014 13:33:39 -0500</pubDate>
       
-      <guid>http://example.org/posts/setup-qemu-for-arm-on-wheezy/</guid>
+      <guid>https://morgancreekmore.me/posts/setup-qemu-for-arm-on-wheezy/</guid>
       <description>&lt;p&gt;This is a quick little blog post for how to install QEMU for ARM on Debian 7.0 (Wheezy).
 &lt;/p&gt;</description>
     </item>

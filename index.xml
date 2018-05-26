@@ -2,50 +2,50 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Morgan Creekmore</title>
-    <link>http://example.org/</link>
+    <link>https://morgancreekmore.me/</link>
     <description>Recent content on Morgan Creekmore</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 16 Mar 2014 13:33:19 -0500</lastBuildDate>
     
-	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://morgancreekmore.me/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Floating Point Hell</title>
-      <link>http://example.org/posts/floating-point-hell/</link>
+      <link>https://morgancreekmore.me/posts/floating-point-hell/</link>
       <pubDate>Sun, 16 Mar 2014 13:33:19 -0500</pubDate>
       
-      <guid>http://example.org/posts/floating-point-hell/</guid>
+      <guid>https://morgancreekmore.me/posts/floating-point-hell/</guid>
       <description>&lt;p&gt;This blog post will show how to deal with floating point error in JavaScript by encoding all uint64&amp;rsquo;s, and int64&amp;rsquo;s to strings in the Json Marshaling.
 &lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Setup QEMU for ARM on Wheezy</title>
-      <link>http://example.org/posts/setup-qemu-for-arm-on-wheezy/</link>
+      <link>https://morgancreekmore.me/posts/setup-qemu-for-arm-on-wheezy/</link>
       <pubDate>Wed, 01 Jan 2014 13:33:39 -0500</pubDate>
       
-      <guid>http://example.org/posts/setup-qemu-for-arm-on-wheezy/</guid>
+      <guid>https://morgancreekmore.me/posts/setup-qemu-for-arm-on-wheezy/</guid>
       <description>&lt;p&gt;This is a quick little blog post for how to install QEMU for ARM on Debian 7.0 (Wheezy).
 &lt;/p&gt;</description>
     </item>
     
     <item>
       <title>About Me</title>
-      <link>http://example.org/about/</link>
+      <link>https://morgancreekmore.me/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/about/</guid>
+      <guid>https://morgancreekmore.me/about/</guid>
       <description>I Write Code! //TODO: add more</description>
     </item>
     
     <item>
       <title>Contributions</title>
-      <link>http://example.org/contributions/</link>
+      <link>https://morgancreekmore.me/contributions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/contributions/</guid>
+      <guid>https://morgancreekmore.me/contributions/</guid>
       <description>SpockBot An event-driven Python framework for building custom Minecraft clients and bots. It contains base plugins for interacting with the Minecraft server, and provides a system for writing custom plugins.
 Github Repository
 go-steam A port of the SteamKit2 library that implements the Steam network protocol in Go to allow automation of various actions through the Steam service.
@@ -54,10 +54,10 @@ Github Repository</description>
     
     <item>
       <title>Projects</title>
-      <link>http://example.org/projects/</link>
+      <link>https://morgancreekmore.me/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/projects/</guid>
+      <guid>https://morgancreekmore.me/projects/</guid>
       <description>ginux A research project involving networked Linux VMs at scale. It uses OpenVZ to create 10,000 VMs and incorporates a user-friendly web interface which displays a 3D graph of the network. The web interface includes an xterm terminal allowing access to the currently selected VM in the graph.
 Github Repository GitHub Repository - QEMU Version
 MAUL Access control system for managing admins and bans for game servers. It provides an API for game servers to query access levels and ban status of connecting players.</description>
@@ -65,10 +65,10 @@ MAUL Access control system for managing admins and bans for game servers. It pro
     
     <item>
       <title>Search</title>
-      <link>http://example.org/search/</link>
+      <link>https://morgancreekmore.me/search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/search/</guid>
+      <guid>https://morgancreekmore.me/search/</guid>
       <description>//TODO: search</description>
     </item>
     
