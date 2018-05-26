@@ -1,0 +1,122 @@
+html,
+body
+{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.img-circle
+{
+    border-radius: 50%;
+}
+
+.headshot
+{
+    width: 115px;
+    height: 115px;
+}
+
+.brand
+{
+    font-size: 2.6em;
+
+    margin-bottom: 0;
+}
+
+.text-center
+{
+    text-align: center;
+}
+
+.meta
+{
+    font-size: .8rem;
+    font-weight: 300;
+}
+
+pre
+{
+    padding: 1px;
+
+    tab-size: 2;
+}
+
+
+.hljs {
+    white-space: pre;
+    
+    overflow-x: auto; /* no line wrapping */
+}
+
+pre code, li code, td code, code
+{
+    border-radius: 4px;
+    white-space: pre-wrap;
+    padding:1px 4px;
+	background: #eee;
+	/* color: #444; */
+	border: 1px solid #d9d9d9;
+}
+
+code {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 90%;
+}
+.copyright, 
+.poweredby
+{
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.center
+{
+    display: block;
+
+    margin-right: auto;
+    margin-left: auto;
+}
+/* Changing from font-awesome 4 to 5, the class pull-right was removed */
+.pull-right {
+    float: right;
+}
+
+/* CUSTOM STUFF */
+.sidebar-arrow {
+    display: block;
+}
+
+@media (min-height: 40em) {
+    .sidebar-arrow {
+        display: none;
+    }
+}
+
+/* Dark */
+.theme-base-dark .sidebar {
+    background-color: #252525;
+}
+.theme-base-dark .content a,
+.theme-base-dark .related-posts li a:hover {
+    color: #0044cc;
+}
+
+/* Dark Blue */
+.theme-base-darkblue .sidebar {
+    background-color: #062F4F;
+}
+.theme-base-darkblue .content a,
+.theme-base-darkblue .related-posts li a:hover {
+    color: #0044cc;
+}
+
+/* Metal */
+.theme-base-metal .sidebar {
+    background-color: #233237;
+}
+.theme-base-metal .content a,
+.theme-base-metal .related-posts li a:hover {
+    color: #0044cc;
+}

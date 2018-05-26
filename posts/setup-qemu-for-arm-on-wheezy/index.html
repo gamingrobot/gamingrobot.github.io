@@ -9,9 +9,10 @@
     
     
     <meta name="generator" content="Hugo 0.40.3" />
-    <title>Morgan Creekmore</title>
-    <meta content="Morgan Creekmore" property="og:title">
-    <meta content="" property="og:description">
+    
+    <title>Setup QEMU for ARM on Wheezy &middot; Morgan Creekmore</title>
+    <meta content="Setup QEMU for ARM on Wheezy - Morgan Creekmore" property="og:title">
+    <meta content=" - " property="og:description">
     <!-- CSS -->
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i|Roboto+Mono:300,300i,400,400i" rel="stylesheet">
     <link rel="stylesheet" href="http://example.org/css/print.css" media="print">
@@ -33,9 +34,7 @@
     
     
     <link rel="shortcut icon" href="/favicon.ico">
-    <!-- RSS -->
-    <link href="http://example.org/index.xml" rel="alternate" type="application/rss+xml" title="Morgan Creekmore" />
-    <link href="http://example.org/index.xml" rel="feed" type="application/rss+xml" title="Morgan Creekmore" />
+    
 
 	</head>
     <body class="theme-base-darkblue " >
@@ -104,34 +103,126 @@
 </div>
 
         <div class="content container">
-            <div class="posts">
+            <div class="post">
+  <h1>Setup QEMU for ARM on Wheezy</h1>
   
-    
-      <div class="post">
-        <h1 class="post-title"><a href="http://example.org/posts/floating-point-hell/">Floating Point Hell</a></h1>
-        <span class="post-date">Mar 16, 2014</span>
-        <p>This blog post will show how to deal with floating point error in JavaScript by encoding all uint64&rsquo;s, and int64&rsquo;s to strings in the Json Marshaling.
+  <div class="col-sm-12 col-md-12">
+    <span class="text-left post-date meta">
+            
+       
+        <i class="fas fa-calendar-alt"></i> Jan 1, 2014
+      
+      
+      
+      
+      <br/>
+      <i class="fas fa-clock"></i> 2 min read 
+      </span>  
+  </div>    
+  
+  <p>This is a quick little blog post for how to install QEMU for ARM on Debian 7.0 (Wheezy).
 </p>
-        
-        <div class="read-more-link">
-            <a href="/posts/floating-point-hell/">Read More…</a>
-        </div>
-        
-        </div>
-      <div class="post">
-        <h1 class="post-title"><a href="http://example.org/posts/setup-qemu-for-arm-on-wheezy/">Setup QEMU for ARM on Wheezy</a></h1>
-        <span class="post-date">Jan 1, 2014</span>
-        <p>This is a quick little blog post for how to install QEMU for ARM on Debian 7.0 (Wheezy).
-</p>
-        
-        <div class="read-more-link">
-            <a href="/posts/setup-qemu-for-arm-on-wheezy/">Read More…</a>
-        </div>
-        
-        </div>
-  </div>
+
+<hr />
+
+<h1 id="installing-toolchains">Installing Toolchains</h1>
+
+<p>Edit /etc/apt/sources.list and add</p>
+
+<pre><code>deb http://emdebian.org/debian/ stable main
+deb http://ftp.us.debian.org/debian/ squeeze main
+</code></pre>
+
+<p>The squeeze repo is for the package <code>libgmp3c2</code> that is unavailable on wheezy.</p>
+
+<p>Install the emdebian public key</p>
+
+<pre><code class="language-bash">apt-get install emdebian-archive-keyring
+apt-get update
+</code></pre>
+
+<p>Install ARM toolchains</p>
+
+<pre><code class="language-bash">apt-get install linux-libc-dev-armel-cross libc6-armel-cross libc6-dev-armel-cross binutils-arm-linux-gnueabi gcc-4.4-arm-linux-gnueabi g++-4.4-arm-linux-gnueabi
+</code></pre>
+
+<hr />
+
+<h2 id="installing-qemu">Installing QEMU</h2>
+
+<p>Install QEMU</p>
+
+<pre><code class="language-bash"># apt-get install qemu qemu-user-static
+</code></pre>
+
+<p>Optional: Install QEMU GUI</p>
+
+<pre><code class="language-bash"># apt-get install aqemu
+</code></pre>
+
+<hr />
+
+<h2 id="hello-arm">Hello ARM</h2>
+
+<p>Time to test everything is working.</p>
+
+<p><code>helloarm.s</code></p>
+
+<pre><code class="language-armasm">.text
+.globl _start
+_start:
+        mov   r0, #5         @ Load register r0 with the value 5
+        mov   r1, #4         @ Load register r1 with the value 4
+        add   r2, r1, r0     @ Add r0 and r1 and store in r2
+
+stop:   b stop               @ Infinite loop to stop execution
+</code></pre>
+
+<p>Assemble, Link, Build</p>
+
+<pre><code class="language-bash">$ arm-linux-gnueabi-as -o helloarm.o helloarm.s
+$ arm-linux-gnueabi-ld -o helloarm.elf helloarm.o
+$ arm-linux-gnueabi-objcopy -O binary helloarm.elf helloarm.bin
+</code></pre>
+
+<p>Setup flash.bin</p>
+
+<pre><code class="language-bash">dd if=/dev/zero of=flash.bin bs=4096 count=4096
+dd if=helloarm.bin of=flash.bin bs=4096 conv=notrunc
+</code></pre>
+
+<p>Launch QEMU</p>
+
+<pre><code class="language-bash">qemu-system-arm -M connex -pflash flash.bin -nographic -serial /dev/null
+</code></pre>
+
+<p>There should now be a <code>(qemu)</code> prompt, type <code>info registers</code> and should see something like this</p>
+
+<pre><code class="language-armasm">R00=00000005 R01=00000004 R02=00000009 R03=00000000
+R04=00000000 R05=00000000 R06=00000000 R07=00000000
+R08=00000000 R09=00000000 R10=00000000 R11=00000000
+R12=00000000 R13=00000000 R14=00000000 R15=0000000c
+PSR=400001d3 -Z-- A svc32
+</code></pre>
+
+<p><code>R02=00000009</code> Register 2 has the value 9 in it so everything is working.</p>
+
+<p>A more in-depth explanation of this helloarm can be found <a href="http://www.bravegnu.org/gnu-eprog/hello-arm.html">here</a>.</p>
+</div>
             <div class="footer">
-                <div>
+                <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/armasm.min.js"></script>
+
+<script type="text/javascript">
+    hljs.configure({languages: []});
+    hljs.initHighlightingOnLoad();
+</script>
+
+
+    <div>
     <p class="copyright">&copy; 2018 - Morgan Creekmore - 
       <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a><br/>Built with <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/htr3n/hyde-hyde">hyde-hyde</a>
     </p>
