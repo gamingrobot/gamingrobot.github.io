@@ -84,26 +84,6 @@ code {
 }
 
 /* CUSTOM STUFF */
-.sidebar-arrow {
-    display: block;
-}
-
-@media (min-height: 32em) {
-    .sidebar-arrow {
-        display: none;
-    }
-}
-
-.sidebar-about .lead{
-    display: none;
-}
-
-@media (min-width: 48em) {
-    .sidebar-about .lead{
-        display: block;
-    }
-  }
-
 /* Dark */
 .theme-base-dark .sidebar {
     background-color: #252525;
@@ -130,3 +110,54 @@ code {
 .theme-base-metal .related-posts li a:hover {
     color: #0044cc;
 }
+
+.sidebar-about .lead{
+    display: none;
+}
+
+@media (min-width: 48em) {
+    .sidebar-about .lead{
+        display: block;
+    }
+    .sidebar-nav-toggle {
+        display: none;
+    }
+    /* show in full view even if not checked */
+    #sidebar-nav-checkbox:not(checked) ~ .sidebar-nav {
+        display: block;
+    }
+}
+
+/* Sidebar nav collapsing menu */
+#sidebar-nav-checkbox {
+    position: absolute;
+    left: -100vw; /* hide offscreen */
+}
+
+.sidebar-nav-toggle {
+    font-size: 1.4em;
+    color: #fff;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.sidebar-nav {
+    display: none;
+}
+
+#sidebar-nav-checkbox:checked ~ .sidebar-nav {
+  display: block;
+}
+
+#sidebar-nav-checkbox:checked ~ .sidebar-nav-toggle {
+    margin-bottom: 0rem;
+}
+
+#sidebar-nav-checkbox:checked ~ .sidebar-nav-toggle .fa-angle-down{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+  
