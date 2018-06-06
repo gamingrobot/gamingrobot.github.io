@@ -20,7 +20,7 @@ body
 
 .brand
 {
-    font-size: 2.6em;
+    font-size: 2em;
 
     margin-bottom: 0;
 }
@@ -116,6 +116,10 @@ code {
 }
 
 @media (min-width: 48em) {
+    .brand
+    {
+        font-size: 2.6em;
+    }
     .sidebar-about .lead{
         display: block;
     }
