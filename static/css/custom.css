@@ -39,6 +39,10 @@
     color: #0044cc;
 } */
 
+.copyright {
+    margin-top: 1rem;
+} 
+
 .sidebar-about .site__title {
     line-height: 1.1;
 }
