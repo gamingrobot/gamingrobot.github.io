@@ -20,6 +20,9 @@ googleAnalytics = "UA-66010416-1"
     highlightjslanguages = ["go", "armasm"]
     highlightjsstyle = "github"
 
+    relatedPosts = false
+    postNavigation = true
+
 ## Social Accounts
 [params.social]
     github = "gamingrobot"
@@ -45,12 +48,7 @@ googleAnalytics = "UA-66010416-1"
     identifier = "projects"
     url = "/projects/"
 [[menu.main]]
-    name = "Contributions"
-    weight = 400
-    identifier = "contributions"
-    url = "/contributions/"
-[[menu.main]]
     name = "Search"
     identifier = "search"
-    weight = 500
+    weight = 400
     url = "/search/"

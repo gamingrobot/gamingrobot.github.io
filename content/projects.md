@@ -11,7 +11,7 @@ showpagemeta = false
 
 A research project involving networked Linux VMs at scale. It uses OpenVZ to create 10,000 VMs and incorporates a user-friendly web interface which displays a 3D graph of the network. The web interface includes an xterm terminal allowing access to the currently selected VM in the graph.
 
-[Github Repository](https://github.com/gamingrobot/ginux)
+[Github Repository](https://github.com/gamingrobot/ginux)  
 [GitHub Repository - QEMU Version](https://github.com/gamingrobot/ginux-qemu)
 
 ---
@@ -24,13 +24,13 @@ Access control system for managing admins and bans for game servers. It provides
 
 ---
 
-## Word Particles
+## SpockBot
 
-![word particles](/img/projects/word-particles.png)
+![spockbot](/img/projects/spockbot.png)
 
-Turns words into exploding particles using [three.js](http://threejs.org/).
+An event-driven Python framework for building custom Minecraft clients and bots. It contains base plugins for interacting with the Minecraft server, and provides a system for writing custom plugins.
 
-[Github Repository](https://github.com/gamingrobot/word-particles)
+[Github Repository](https://github.com/SpockBotMC/)
 
 ---
 

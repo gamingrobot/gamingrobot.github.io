@@ -1,0 +1,98 @@
+
+/* CUSTOM STUFF */
+/* Dark */
+.theme-base-dark .sidebar {
+    background-color: #252525;
+}
+.theme-base-dark .post--navigation a {
+    color: #0044cc;
+    border: 2px solid #0044cc;
+}
+/* .theme-base-dark .content a,
+.theme-base-dark .related-posts li a:hover {
+    color: #0044cc;
+} */
+
+/* Dark Blue */
+.theme-base-darkblue .sidebar {
+    background-color: #062F4F;
+}
+.theme-base-darkblue .post--navigation a {
+    color: #0044cc;
+    border: 2px solid #0044cc;
+}
+/* .theme-base-darkblue .content a,
+.theme-base-darkblue .related-posts li a:hover {
+    color: #0044cc;
+} */
+
+/* Metal */
+.theme-base-metal .sidebar {
+    background-color: #233237;
+}
+.theme-base-metal .post--navigation a {
+    color: #0044cc;
+    border: 2px solid #0044cc;
+}
+/* .theme-base-metal .content a,
+.theme-base-metal .related-posts li a:hover {
+    color: #0044cc;
+} */
+
+.sidebar-about .site__title {
+    line-height: 1.1;
+}
+
+.sidebar-about .site__description {
+    display: none;
+}
+
+@media (min-width: 48em) {
+    .sidebar-about .site__title {
+        font-size: 2.6em;
+    }
+    .sidebar-about .site__description {
+        display: block;
+    }
+    .sidebar-nav-toggle {
+        display: none;
+    }
+    /* show in full view even if not checked */
+    #sidebar-nav-checkbox:not(checked) ~ .sidebar-nav {
+        display: block;
+    }
+}
+
+/* Sidebar nav collapsing menu */
+#sidebar-nav-checkbox {
+    position: absolute;
+    left: -100vw; /* hide offscreen */
+}
+
+.sidebar-nav-toggle {
+    font-size: 1.2em;
+    color: #fff;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.sidebar-nav {
+    display: none;
+}
+
+#sidebar-nav-checkbox:checked ~ .sidebar-nav {
+  display: block;
+}
+
+#sidebar-nav-checkbox:checked ~ .sidebar-nav-toggle {
+    margin-bottom: 0rem;
+}
+
+#sidebar-nav-checkbox:checked ~ .sidebar-nav-toggle .fa-angle-down{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+  
