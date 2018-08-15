@@ -17,7 +17,7 @@ googleAnalytics = "UA-66010416-1"
     dateformat = "Jan 2, 2006"
     themeColor = "theme-base-darkblue"
     highlightjs = true
-    highlightjslanguages = ["go", "armasm"]
+    #highlightjslanguages = ["go", "armasm"]
     highlightjsstyle = "github"
 
     relatedPosts = false

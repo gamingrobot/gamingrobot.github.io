@@ -1,6 +1,7 @@
 +++
 title = "Projects"
 showpagemeta = false
+highlight = false
 +++
 
 ---
