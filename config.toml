@@ -9,6 +9,9 @@ theme = "hyde-hyde"
 googleAnalytics = "UA-66010416-1"
 # enableRobotsTXT = true
 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
 ## Site Settings
 [params]
     author = "Morgan Creekmore"

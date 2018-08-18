@@ -1,8 +1,8 @@
-+++
-title = "Setup QEMU for ARM on Wheezy"
-date = "2014-01-01T13:33:39-05:00"
-highlightjslanguages = ["armasm"]
-+++
+---
+title: "Setup QEMU for ARM on Wheezy"
+date: "2014-01-01T13:33:39-05:00"
+highlightjslanguages: ["armasm"]
+---
 
 This is a quick little blog post for how to install QEMU for ARM on Debian 7.0 (Wheezy).
 <!--more-->

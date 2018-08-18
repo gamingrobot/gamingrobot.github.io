@@ -1,8 +1,8 @@
-+++
-title = "Projects"
-showpagemeta = false
-highlight = false
-+++
+---
+title: "Projects"
+showpagemeta: false
+highlight: false
+---
 
 ---
 
