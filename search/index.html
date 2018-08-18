@@ -4,7 +4,7 @@
     
 
     <head>
-    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <link href="https://gmpg.org/xfn/11" rel="profile">
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta http-equiv="Cache-Control" content="public" />
@@ -21,10 +21,10 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Search"/>
-<meta name="twitter:description" content="//TODO: search"/>
+<meta name="twitter:description" content="Search"/>
 
 <meta property="og:title" content="Search" />
-<meta property="og:description" content="//TODO: search" />
+<meta property="og:description" content="Search" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://morgancreekmore.me/search/" />
 
@@ -162,33 +162,22 @@
 
         <div class="content container">
             
-    <article>
-  <header>
-    <h1>Search</h1>
-     
-    
+<article>
+    <header>
+      <h1>Search</h1>
+       
+      
 
-  </header>
-  <div class="post">
-    <p>//TODO: search</p>
-
-  </div>
-  
-
-<div class="post--navigation post--navigation-single">
-    
-    
-</div>
-
-
-  
-
-  
-    
-
-
-</article>
-
+    </header>
+    <div class="search-form">
+        <form action="https://morgancreekmore.me/search">
+            <input id="search-query" type="text" autofocus="autofocus" name="s"/>
+        </form>
+        <div id="search-results">
+            <h3>Results</h3>
+        </div>
+    </div>
+  </article>
 
             <div class="copyright">
     &copy; 2018 Morgan Creekmore -
@@ -223,6 +212,20 @@ if (!doNotTrack) {
     
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.2/lunr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
+    <script src="https://morgancreekmore.me/js/search.js"></script>
+    
+    <script id="search-result-template" type="text/x-js-template">
+        <div id="summary-${key}">
+        <h4><a href="${link}">${title}</a></h4>
+        <p>${snippet}</p>
+        ${ isset tags }<p>Tags: ${tags}</p>${ end }
+        ${ isset categories }<p>Categories: ${categories}</p>${ end }
+        </div>
+    </script>
 
     </body>
 </html>
