@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/gamingrobot
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://morgancreekmore.me
+  * I am gamingrobot (https://keybase.io/gamingrobot) on keybase.
+  * I have a public key ASDWWuw3nJLn3b9_Oc2pFlFp1D3i_k-0eVUtfbfJPY7Z-wo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120d65aec379c92e7ddbf7f39cda9165169d43de2fe4fb479552d7db7c93d8ed9fb0a",
+      "host": "keybase.io",
+      "kid": "0120d65aec379c92e7ddbf7f39cda9165169d43de2fe4fb479552d7db7c93d8ed9fb0a",
+      "uid": "8bebda241d472f79859935ce491e3900",
+      "username": "gamingrobot"
+    },
+    "merkle_root": {
+      "ctime": 1535261063,
+      "hash": "f4b59cb2a27bda45c11a531c8c5efac15e015134ace9ff9ca6a8306264ddd2f5de493a8422056991da7124c5ee485806c9a1a8aee33c9fa1fd84b222acfc0d78",
+      "hash_meta": "ac514088793b9db8e99fee42d4ff2528d7f83b10b2ada52e1f12f18d35a341a9",
+      "seqno": 3516877
+    },
+    "service": {
+      "entropy": "KFBtvk7Cp+HI5esKXDDUKzWW",
+      "hostname": "morgancreekmore.me",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.5.1"
+  },
+  "ctime": 1535261173,
+  "expire_in": 504576000,
+  "prev": "9df9f516c91208fe88aac7754b7dbae2ead2d2e2f82d353c59d8ee627720eef9",
+  "seqno": 8,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg1lrsN5yS592/fznNqRZRadQ94v5PtHlVLX23yT2O2fsKp3BheWxvYWTESpcCCMQgnfn1FskSCP6Iqsd1S3264urS0uL4LTU8WdjuYncg7vnEIG32mAekmG1rYemcj8J5AB5KimZPpHa04zSxljHHXb5MAgHCo3NpZ8RA70j9/mrm9V9qxYsUf7RslvlMs23MOyyk1BFLl8LGQiG4Ji2jY61ARiDR43bjhEeiCp57qLyBhB5mzb+RqF7vAahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIKmFk3LJwkAOGYgMIPGWCBOgzsyX/VIquiBkJzSVowJvo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/gamingrobot
+
+==================================================================
