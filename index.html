@@ -8,7 +8,7 @@
 <meta http-equiv="Cache-Control" content="public" />
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.45" />
+<meta name="generator" content="Hugo 0.49" />
 
     
 
@@ -23,19 +23,7 @@
 <meta property="og:description" content="Doing Stuff" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://morgancreekmore.me/" />
-
-
-
 <meta property="og:updated_time" content="2014-03-16T13:33:19-05:00"/>
-
-
-
-
-
-
-
-
-
 
 
     
@@ -48,7 +36,9 @@
 
 <link rel="stylesheet" href="/css/hyde-hyde.css">
 <link rel="stylesheet" href="/css/custom.css">
-<link rel="stylesheet" href="/css/print.min.css" media="print">
+<link rel="stylesheet" href="/css/print.css" media="print">
+
+
     <!-- Font-Awesome -->	
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/solid.css" integrity="sha384-wnAC7ln+XN0UKdcPvJvtqIH3jOjs9pnKnq9qX68ImXvOGz2JuFoEiCjT8jyZQX2z" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/brands.css" integrity="sha384-nT8r1Kzllf71iZl81CdFzObMsaLOhqBU1JD2+XoAALbdtWaXDOlWOZTR4v1ktjPE" crossorigin="anonymous">
@@ -71,7 +61,7 @@
 
 
     <body class="theme-base-darkblue ">
-        
+    
 <div class="sidebar">
   <div class="container ">
     <div class="sidebar-about">
@@ -83,13 +73,11 @@
          Doing Stuff 
       </p>
     </div>
-    <div>
-	<input id="sidebar-nav-checkbox" type="checkbox">
-	<div class="sidebar-nav-toggle">
-		<label for="sidebar-nav-checkbox">
-			<span>Menu&nbsp;</span><i class="fas fa-angle-down" aria-hidden="true" style="vertical-align: middle;"></i>
-		</label>
-	</div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Morgan Creekmore</label>
+      <div class="menu-content">
+        <div>
 	<ul class="sidebar-nav">
 		 
 		 
@@ -129,36 +117,35 @@
 	</ul>
 </div>
 
-    <p>
-      <section class="social">
+        <section class="social">
 	
-	<a href="https://twitter.com/gamingrobot"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
-	
-	
-	
-	&nbsp;<a href="https://github.com/gamingrobot"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	<a href="https://twitter.com/gamingrobot" rel="me"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
 	
 	
 	
-	
-	
-	&nbsp;<a href="https://linkedin.com/in/morgancreekmore"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
-	
-	
-	&nbsp;<a href="https://stackoverflow.com/users/1161491"><i class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
+	<a href="https://github.com/gamingrobot" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 	
 	
 	
 	
 	
+	<a href="https://linkedin.com/in/morgancreekmore" rel="me"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
 	
-	&nbsp;<a href="mailto:morgan@creekmore.email"><i class="fas fa-at fa-lg" aria-hidden="true"></i></a>
+	
+	<a href="https://stackoverflow.com/users/1161491" rel="me"><i class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	<a href="mailto:morgan@creekmore.email" rel="me"><i class="fas fa-at fa-lg" aria-hidden="true"></i></a>
 	
 </section>
 
-    </p>
-  </div>
-  <div>
+      </div>
+    </div>
+    
   </div>
 </div>
 
@@ -170,37 +157,40 @@
       <div class="post-list__item">
         <span class="item__title--big">
           <a href="/posts/floating-point-hell/">Floating Point Hell</a>
+          
         </span>
         <span class="item__date">
           Mar 16, 2014
         </span>
+        
         <p>This blog post will show how to deal with floating point error in JavaScript by encoding all uint64&rsquo;s, and int64&rsquo;s to strings in the Json Marshaling.
 </p>
         
-        <div class="read-more-link">
-            <a href="/posts/floating-point-hell/">Read More…</a>
-        </div>
+        
+          ... <a class="read-more-symbol" href="/posts/floating-point-hell/">➦</a>
         
         </div>
-        
+     
       <div class="post-list__item">
         <span class="item__title--big">
           <a href="/posts/setup-qemu-for-arm-on-wheezy/">Setup QEMU for ARM on Wheezy</a>
+          
         </span>
         <span class="item__date">
           Jan 1, 2014
         </span>
+        
         <p>This is a quick little blog post for how to install QEMU for ARM on Debian 7.0 (Wheezy).
 </p>
         
-        <div class="read-more-link">
-            <a href="/posts/setup-qemu-for-arm-on-wheezy/">Read More…</a>
-        </div>
+        
+          ... <a class="read-more-symbol" href="/posts/setup-qemu-for-arm-on-wheezy/">➦</a>
         
         </div>
-        
      
   </div>
+  
+
 
             <div class="copyright">
     &copy; 2018 Morgan Creekmore -
@@ -211,10 +201,10 @@
 </div>
         </div>
         
-
   
-  
-<script>
+    
+    
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -225,8 +215,8 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-
-
+  
+  
 
     </body>
 </html>
