@@ -4,12 +4,12 @@
 .theme-base-darkblue .sidebar {
     background-color: #062F4F;
 }
-.theme-base-darkblue .post--navigation a {
+.theme-base-darkblue .navigation a {
     color: #0044cc !important;
     border: 2px solid #0044cc !important;
 }
 
-.theme-base-darkblue .post--navigation a:hover {
+.theme-base-darkblue .navigation a:hover {
     border-width: 3px !important;
 }
 
@@ -32,46 +32,6 @@
     .sidebar-about .site__description {
         display: block;
     }
-    .sidebar-nav-toggle {
-        display: none;
-    }
-    /* show in full view even if not checked */
-    #sidebar-nav-checkbox:not(checked) ~ .sidebar-nav {
-        display: block;
-    }
-}
-
-/* Sidebar nav collapsing menu */
-#sidebar-nav-checkbox {
-    position: absolute;
-    left: -100vw; /* hide offscreen */
-}
-
-.sidebar-nav-toggle {
-    font-size: 1.2em;
-    color: #fff;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.sidebar-nav {
-    display: none;
-}
-
-#sidebar-nav-checkbox:checked ~ .sidebar-nav {
-  display: block;
-}
-
-#sidebar-nav-checkbox:checked ~ .sidebar-nav-toggle {
-    margin-bottom: 0rem;
-}
-
-#sidebar-nav-checkbox:checked ~ .sidebar-nav-toggle .fa-angle-down{
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    transform: rotate(180deg);
 }
 
 .search-form input {

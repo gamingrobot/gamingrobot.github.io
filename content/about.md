@@ -1,7 +1,6 @@
 ---
 title: "About Me"
 showpagemeta: false
-highlight: true
 ---
 ![Profile](/img/about/profile_small.png)
 
