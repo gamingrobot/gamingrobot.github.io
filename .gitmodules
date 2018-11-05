@@ -1,7 +1,3 @@
-[submodule "public"]
-	path = public
-	url = git@github.com:gamingrobot/gamingrobot.github.io.git
-	branch = master
 [submodule "themes/hyde-hyde"]
 	path = themes/hyde-hyde
 	url = git@github.com:htr3n/hyde-hyde.git
