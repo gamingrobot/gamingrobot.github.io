@@ -22,6 +22,9 @@ googleAnalytics = "UA-66010416-1"
     highlightjs = true
     #highlightjslanguages = ["go", "armasm"]
     highlightjsstyle = "github"
+    UtterancesRepo = "gamingrobot/gamingrobot.github.io" # https://utteranc.es/
+    UtterancesIssueTerm = "pathname" # pathname, url, title, og:title
+    UtterancesTheme = "github-light" # github-light or github-dark
 
     relatedPosts = false
     postNavigation = true
@@ -32,6 +35,7 @@ googleAnalytics = "UA-66010416-1"
     linkedin = "morgancreekmore"
     twitter = "gamingrobot"
     stackoverflow = "1161491"
+    keybase = "gamingrobot"
     email = "morgan@creekmore.email"
 
 ## Main Menu
