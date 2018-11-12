@@ -1,8 +1,9 @@
 <head>
     <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta name="theme-color" content="#062F4F"/>
     {{ partial "header/meta.html" . }}
     {{ partial "header/styles.html" . }}
-    <link rel="stylesheet" href="{{ "css/custom.css" | absURL }}">
+    <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
     {{ "<!-- Font-Awesome -->" | safeHTML }}	
     {{ partial "header/font-awesome-css.html" . }}
     {{ `<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
