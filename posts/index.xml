@@ -17,8 +17,7 @@
       <pubDate>Sun, 16 Mar 2014 13:33:19 -0500</pubDate>
       
       <guid>https://morgancreekmore.me/posts/floating-point-hell/</guid>
-      <description>&lt;p&gt;This blog post will show how to deal with floating point error in JavaScript by encoding all uint64&amp;rsquo;s, and int64&amp;rsquo;s to strings in the Json Marshaling.
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;This blog post will show how to deal with floating point error in JavaScript by encoding all uint64&amp;rsquo;s, and int64&amp;rsquo;s to strings in the Json Marshaling.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -27,8 +26,7 @@
       <pubDate>Wed, 01 Jan 2014 13:33:39 -0500</pubDate>
       
       <guid>https://morgancreekmore.me/posts/setup-qemu-for-arm-on-wheezy/</guid>
-      <description>&lt;p&gt;This is a quick little blog post for how to install QEMU for ARM on Debian 7.0 (Wheezy).
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;This is a quick little blog post for how to install QEMU for ARM on Debian 7.0 (Wheezy).&lt;/p&gt;</description>
     </item>
     
   </channel>
