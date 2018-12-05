@@ -2,7 +2,7 @@
 title: "About Me"
 showpagemeta: false
 ---
-![Profile](/img/about/profile_small.png)
+![Profile](https://f001.backblazeb2.com/file/grbt-blog/images/profile_small.png)
 
 My name is Morgan Creekmore and I work as a Senior Software Engineer doing DevOps and C#/.NET Development.
 
