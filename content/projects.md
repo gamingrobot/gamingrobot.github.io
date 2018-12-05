@@ -8,7 +8,7 @@ highlight: false
 
 ## ginux
 
-![ginux](/img/projects/ginux.png)
+![ginux](https://f001.backblazeb2.com/file/grbt-blog/images/projects/ginux.png)
 
 A research project involving networked Linux VMs at scale. It uses OpenVZ to create 10,000 VMs and incorporates a user-friendly web interface which displays a 3D graph of the network. The web interface includes an xterm terminal allowing access to the currently selected VM in the graph.
 
@@ -19,7 +19,7 @@ A research project involving networked Linux VMs at scale. It uses OpenVZ to cre
 
 ## MAUL
 
-![maul](/img/projects/maul.png)
+![maul](https://f001.backblazeb2.com/file/grbt-blog/images/projects/maul.png)
 
 Access control system for managing admins and bans for game servers. It provides an API for game servers to query access levels and ban status of connecting players.
 
@@ -27,7 +27,7 @@ Access control system for managing admins and bans for game servers. It provides
 
 ## SpockBot
 
-![spockbot](/img/projects/spockbot.png)
+![spockbot](https://f001.backblazeb2.com/file/grbt-blog/images/projects/spockbot.png)
 
 An event-driven Python framework for building custom Minecraft clients and bots. It contains base plugins for interacting with the Minecraft server, and provides a system for writing custom plugins.
 
@@ -37,7 +37,7 @@ An event-driven Python framework for building custom Minecraft clients and bots.
 
 ## PPRA
 
-![ppra](/img/projects/ppra.png)
+![ppra](https://f001.backblazeb2.com/file/grbt-blog/images/projects/ppra.png)
 
 High School senior project for a mind controlled robotic arm, using [Emotiv](http://emotiv.com/) Headset and homemade robotic arm.
 
