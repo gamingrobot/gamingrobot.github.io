@@ -1,6 +1,7 @@
 ---
 title: "About Me"
 showpagemeta: false
+showcomments: false
 ---
 ![Profile](https://f001.backblazeb2.com/file/grbt-blog/images/profile_small.png)
 

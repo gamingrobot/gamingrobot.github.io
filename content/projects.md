@@ -2,6 +2,7 @@
 title: "Projects"
 showpagemeta: false
 highlight: false
+showcomments: false
 ---
 
 ---
