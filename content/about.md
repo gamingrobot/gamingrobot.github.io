@@ -5,7 +5,7 @@ showcomments: false
 ---
 ![Profile](https://f001.backblazeb2.com/file/grbt-blog/images/profile_small.png)
 
-My name is Morgan Creekmore and I work as a Senior Software Engineer doing DevOps and C#/.NET Development.
+My name is Morgan Creekmore and I work as a Software Engineer doing C#/.NET Development.
 
 In my free time I like to tinker with my personal infrastructure, code up little projects, and play video games.
 
