@@ -17,7 +17,7 @@
       <pubDate>Sun, 16 Mar 2014 13:33:19 -0500</pubDate>
       
       <guid>https://morgancreekmore.me/posts/floating-point-hell/</guid>
-      <description>&lt;p&gt;This blog post will show how to deal with floating point error in JavaScript by encoding all uint64&amp;rsquo;s, and int64&amp;rsquo;s to strings in the Json Marshaling.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This blog post will show how to deal with floating-point error in JavaScript by encoding all uint64&amp;rsquo;s, and int64&amp;rsquo;s as strings in JSON Marshaling.&lt;/p&gt;</description>
     </item>
     
     <item>

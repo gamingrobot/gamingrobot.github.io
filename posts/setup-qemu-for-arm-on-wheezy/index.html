@@ -194,9 +194,9 @@
 
 <hr />
 
-<h1 id="installing-toolchains">Installing Toolchains</h1>
+<h2 id="installing-toolchains">Installing Toolchains</h2>
 
-<p>Edit /etc/apt/sources.list and add</p>
+<p>Edit <code>/etc/apt/sources.list</code> and add</p>
 
 <pre><code>deb http://emdebian.org/debian/ stable main
 deb http://ftp.us.debian.org/debian/ squeeze main
@@ -204,7 +204,7 @@ deb http://ftp.us.debian.org/debian/ squeeze main
 
 <p>The squeeze repo is for the package <code>libgmp3c2</code> that is unavailable on wheezy.</p>
 
-<p>Install the emdebian public key</p>
+<p>Install the <code>emdebian</code> public key</p>
 
 <pre><code class="language-bash">apt-get install emdebian-archive-keyring
 apt-get update
@@ -217,21 +217,21 @@ apt-get update
 
 <hr />
 
-<h2 id="installing-qemu">Installing QEMU</h2>
+<h3 id="installing-qemu">Installing QEMU</h3>
 
 <p>Install QEMU</p>
 
-<pre><code class="language-bash"># apt-get install qemu qemu-user-static
+<pre><code class="language-bash">apt-get install qemu qemu-user-static
 </code></pre>
 
 <p>Optional: Install QEMU GUI</p>
 
-<pre><code class="language-bash"># apt-get install aqemu
+<pre><code class="language-bash">apt-get install aqemu
 </code></pre>
 
 <hr />
 
-<h2 id="hello-arm">Hello ARM</h2>
+<h3 id="hello-arm">Hello ARM</h3>
 
 <p>Time to test everything is working.</p>
 
@@ -249,12 +249,12 @@ stop:   b stop               @ Infinite loop to stop execution
 
 <p>Assemble, Link, Build</p>
 
-<pre><code class="language-bash">$ arm-linux-gnueabi-as -o helloarm.o helloarm.s
-$ arm-linux-gnueabi-ld -o helloarm.elf helloarm.o
-$ arm-linux-gnueabi-objcopy -O binary helloarm.elf helloarm.bin
+<pre><code class="language-bash">arm-linux-gnueabi-as -o helloarm.o helloarm.s
+arm-linux-gnueabi-ld -o helloarm.elf helloarm.o
+arm-linux-gnueabi-objcopy -O binary helloarm.elf helloarm.bin
 </code></pre>
 
-<p>Setup flash.bin</p>
+<p>Setup <code>flash.bin</code></p>
 
 <pre><code class="language-bash">dd if=/dev/zero of=flash.bin bs=4096 count=4096
 dd if=helloarm.bin of=flash.bin bs=4096 conv=notrunc
@@ -276,7 +276,7 @@ PSR=400001d3 -Z-- A svc32
 
 <p><code>R02=00000009</code> Register 2 has the value 9 in it so everything is working.</p>
 
-<p>A more in-depth explanation of this helloarm can be found <a href="http://www.bravegnu.org/gnu-eprog/hello-arm.html">here</a>.</p>
+<p>A more in-depth explanation of this helloarm program can be found <a href="http://www.bravegnu.org/gnu-eprog/hello-arm.html">here</a>.</p>
   </div>
   
 

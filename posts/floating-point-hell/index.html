@@ -23,10 +23,10 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Floating Point Hell"/>
-<meta name="twitter:description" content="This blog post will show how to deal with floating point error in JavaScript by encoding all uint64&rsquo;s, and int64&rsquo;s to strings in the Json Marshaling."/>
+<meta name="twitter:description" content="This blog post will show how to deal with floating-point error in JavaScript by encoding all uint64&rsquo;s, and int64&rsquo;s as strings in JSON Marshaling."/>
 
 <meta property="og:title" content="Floating Point Hell" />
-<meta property="og:description" content="This blog post will show how to deal with floating point error in JavaScript by encoding all uint64&rsquo;s, and int64&rsquo;s to strings in the Json Marshaling." />
+<meta property="og:description" content="This blog post will show how to deal with floating-point error in JavaScript by encoding all uint64&rsquo;s, and int64&rsquo;s as strings in JSON Marshaling." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://morgancreekmore.me/posts/floating-point-hell/" />
 <meta property="article:published_time" content="2014-03-16T13:33:19-05:00"/>
@@ -190,17 +190,17 @@
   
   
   <div class="post">
-    <p>This blog post will show how to deal with floating point error in JavaScript by encoding all uint64&rsquo;s, and int64&rsquo;s to strings in the Json Marshaling.</p>
+    <p>This blog post will show how to deal with floating-point error in JavaScript by encoding all uint64&rsquo;s, and int64&rsquo;s as strings in JSON Marshaling.</p>
 
-<p>JavaScript has 53-bits of integer precision, this is a problem when trying to represent a 64-bit number. Ways of solving this in JavaScript is to use <a href="https://v8project.blogspot.com/2018/05/bigint.html">bigint</a> or <a href="http://mathjs.org/">math.js</a>, but when parsing Json we can&rsquo;t use this.</p>
+<p>JavaScript has 53-bits of integer precision, this is a problem when trying to represent a 64-bit number. Ways of solving this in JavaScript is to use <a href="https://v8project.blogspot.com/2018/05/bigint.html">bigint</a> or <a href="http://mathjs.org/">math.js</a>, but when parsing JSON we can&rsquo;t use this.</p>
 
 <hr />
 
-<h1 id="when-it-goes-wrong">When it goes wrong</h1>
+<h2 id="when-it-goes-wrong">When it goes wrong</h2>
 
-<p>This is a example of how it can go wrong. Go encodes the Json properly, but when parsed by JavaScript the number does not match.</p>
+<p>This is an example of how it can go wrong. Go encodes the JSON correctly, but when parsed by JavaScript the number does not match.</p>
 
-<h2 id="go">Go</h2>
+<h3 id="go">Go</h3>
 
 <p>Base data structure</p>
 
@@ -227,10 +227,9 @@ Data -&gt; Json {&quot;Id&quot;:12345678901234567892,&quot;BigNum&quot;:12000000
 Json -&gt; Data {Id:12345678901234567892 BigNum:12000000000002539}
 </code></pre>
 
-<p>As you can see Go has no problem encoding and decoding the large integers.
-But lets see what happens when JavaScript tries to decode the same integers.</p>
+<p>As you can see Go has no problem encoding and decoding the large integers. But let&rsquo;s see what happens when JavaScript tries to decode the same integers.</p>
 
-<h2 id="javascript">JavaScript</h2>
+<h3 id="javascript">JavaScript</h3>
 
 <pre><code class="language-javascript">var data = '{&quot;Id&quot;:12345678901234567892,&quot;BigNum&quot;:12000000000002539}'
 console.log(JSON.parse(data))
@@ -239,8 +238,7 @@ console.log(JSON.parse(data))
 Object {Id: 12345678901234567000, BigNum: 12000000000002540}
 </code></pre>
 
-<p>JavaScript ended up decoding the number, but its wrong.
-But if we check for equivalence in JavaScript it returns true.</p>
+<p>JavaScript ended up decoding the number, but its wrong. But if we check for equivalence in JavaScript it returns true.</p>
 
 <pre><code class="language-javascript">&gt; 12000000000002539 === 12000000000002540
 true
@@ -248,12 +246,13 @@ true
 
 <hr />
 
-<h1 id="how-to-fix-it">How to fix it</h1>
+<h2 id="how-to-fix-it">How to fix it</h2>
 
-<p>The easiest way to fix this is to encode the int64 to a string, that way when parsed in JavaScript the number is properly represented.
-Below I have added <code>json:&quot;,string&quot;</code> tag to the end of every int64, this tells the <code>encoding/json</code> package to encode that field as a string instead of a integer.</p>
+<p>The easiest way to fix this is to encode the int64 to a string, that way when parsed in JavaScript the number is represented correctly.</p>
 
-<h2 id="go-1">Go</h2>
+<p>Below I have added <code>json:&quot;,string&quot;</code> tag to the end of every int64, this tells the <code>encoding/json</code> package to encode that field as a string instead of an integer.</p>
+
+<h3 id="go-1">Go</h3>
 
 <p>Base data structure with tags</p>
 
@@ -280,9 +279,9 @@ Data -&gt; Json {&quot;Id&quot;:&quot;12345678901234567892&quot;,&quot;BigNum&qu
 Json -&gt; Data {Id:12345678901234567892 BigNum:12000000000002539}
 </code></pre>
 
-<p>With the tag we can encode and decode the Json and keep the int64 type internally.</p>
+<p>With the tag we can encode and decode the JSON and keep the int64 type in Go.</p>
 
-<h2 id="javascript-1">JavaScript</h2>
+<h3 id="javascript-1">JavaScript</h3>
 
 <pre><code class="language-javascript">var data = '{&quot;Id&quot;:&quot;12345678901234567892&quot;,&quot;BigNum&quot;:&quot;12000000000002539&quot;}'
 console.log(JSON.parse(data))
@@ -291,7 +290,7 @@ console.log(JSON.parse(data))
 Object {Id: &quot;12345678901234567892&quot;, BigNum: &quot;12000000000002539&quot;}
 </code></pre>
 
-<p>Now in JavaScript the number is properly represented because they are strings.</p>
+<p>Now the number is represented correctly in JavaScript. This is useful if you are using the number as an identifier, but makes it difficult to do arithmetic operations on the number.</p>
   </div>
   
 
