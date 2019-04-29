@@ -9,9 +9,9 @@ This is a quick little blog post for how to install QEMU for ARM on Debian 7.0 (
 
 ---
 
-# Installing Toolchains
+## Installing Toolchains
 
-Edit /etc/apt/sources.list and add
+Edit `/etc/apt/sources.list` and add
 
 ```
 deb http://emdebian.org/debian/ stable main
@@ -20,7 +20,7 @@ deb http://ftp.us.debian.org/debian/ squeeze main
 
 The squeeze repo is for the package `libgmp3c2` that is unavailable on wheezy.
 
-Install the emdebian public key
+Install the `emdebian` public key
 
 ```bash
 apt-get install emdebian-archive-keyring
@@ -35,23 +35,23 @@ apt-get install linux-libc-dev-armel-cross libc6-armel-cross libc6-dev-armel-cro
 
 ---
 
-## Installing QEMU
+### Installing QEMU
 
 Install QEMU
 
 ```bash
-# apt-get install qemu qemu-user-static
+apt-get install qemu qemu-user-static
 ```
 
 Optional: Install QEMU GUI
 
 ```bash
-# apt-get install aqemu
+apt-get install aqemu
 ```
 
 ---
 
-## Hello ARM
+### Hello ARM
 
 Time to test everything is working.
 
@@ -71,12 +71,12 @@ stop:   b stop               @ Infinite loop to stop execution
 Assemble, Link, Build
 
 ```bash
-$ arm-linux-gnueabi-as -o helloarm.o helloarm.s
-$ arm-linux-gnueabi-ld -o helloarm.elf helloarm.o
-$ arm-linux-gnueabi-objcopy -O binary helloarm.elf helloarm.bin
+arm-linux-gnueabi-as -o helloarm.o helloarm.s
+arm-linux-gnueabi-ld -o helloarm.elf helloarm.o
+arm-linux-gnueabi-objcopy -O binary helloarm.elf helloarm.bin
 ```
 
-Setup flash.bin
+Setup `flash.bin`
 
 ```bash
 dd if=/dev/zero of=flash.bin bs=4096 count=4096
@@ -101,4 +101,4 @@ PSR=400001d3 -Z-- A svc32
 
 `R02=00000009` Register 2 has the value 9 in it so everything is working.
 
-A more in-depth explanation of this helloarm can be found [here](http://www.bravegnu.org/gnu-eprog/hello-arm.html).
+A more in-depth explanation of this helloarm program can be found [here](http://www.bravegnu.org/gnu-eprog/hello-arm.html).
