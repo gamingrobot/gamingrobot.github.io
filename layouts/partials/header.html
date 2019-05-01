@@ -3,7 +3,9 @@
     <meta name="theme-color" content="#062F4F"/>
     {{ partial "header/meta.html" . }}
     {{ partial "header/styles.html" . }}
-    <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
+    {{ $cssOptions := (dict "outputStyle" "compressed" "enableSourceMap" true) }}
+    {{ $custom := resources.Get "scss/custom.scss" | toCSS $cssOptions | fingerprint }}
+    <link rel="stylesheet" href="{{ $custom.RelPermalink }}" integrity="{{ $custom.Data.Integrity }}">
     {{ "<!-- Font-Awesome -->" | safeHTML }}	
     {{ partial "header/font-awesome-css.html" . }}
     {{ `<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->

@@ -1,38 +1,6 @@
-
-/* CUSTOM STUFF */
-/* Dark Blue */
-.theme-base-darkblue .sidebar {
-    background-color: #062F4F;
-}
-.theme-base-darkblue .navigation a {
-    color: #0044cc !important;
-    border: 2px solid #0044cc !important;
-}
-
-.theme-base-darkblue .navigation a:hover {
-    border-width: 3px !important;
-}
-
 .copyright {
     margin-top: 1rem;
 } 
-
-.sidebar-about .site__title {
-    line-height: 1.1;
-}
-
-.sidebar-about .site__description {
-    display: none;
-}
-
-@media (min-width: 48em) {
-    .sidebar-about .site__title {
-        font-size: 2.6em;
-    }
-    .sidebar-about .site__description {
-        display: block;
-    }
-}
 
 .search-form input {
     -webkit-transition: all 0.30s ease-in-out;
