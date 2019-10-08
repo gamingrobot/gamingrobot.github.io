@@ -29,7 +29,7 @@ https://keybase.io/gamingrobot/key.asc
 """
   avatar = "images/profile.png"
   favicon = "favicon.png"
-  error404 = "¯\\_(ツ)_/¯"
+  error404 = "Not all those who wander are lost"
 
   [params.contact]
     keybase = "https://keybase.io/gamingrobot"
