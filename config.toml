@@ -3,59 +3,36 @@ baseURL = "https://morgancreekmore.me/"
 languageCode = "en-us"
 title = "Morgan Creekmore"
 
-theme = "hyde-hyde"
+theme = "vncnt-hugo"
 
 ## Hugo Built-in Features
 googleAnalytics = "UA-66010416-1"
+disableRSS = true
 # enableRobotsTXT = true
 
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
-
-## Site Settings
 [params]
-    author = "Morgan Creekmore"
-    description = "Doing Stuff"
-    #authorimage = "/img/author.jpg"
-    dateformat = "Jan 2, 2006"
-    themeColor = "theme-base-darkblue"
-    highlightjs = true
-    #highlightjslanguages = ["go", "armasm"]
-    highlightjsstyle = "github"
-    UtterancesRepo = "gamingrobot/gamingrobot.github.io" # https://utteranc.es/
-    UtterancesIssueTerm = "pathname" # pathname, url, title, og:title
-    UtterancesTheme = "github-light" # github-light or github-dark
+  author = "Morgan Creekmore"
+  email = "morgan@creekmore.email"
+  keywords = "developer"
+  info = "Doing Stuff"
+  description = "Doing Stuff"
+  bio = """
+  I work as a Software Engineer doing C#/.NET Development. 
+  
+  In my free time I like to tinker with my personal infrastructure, code up little projects, and play video games.
 
-    relatedPosts = false
-    postNavigation = true
+  You can check out my blog at [doingstuff.dev](https://www.doingstuff.dev)
+```
+A1E3 8483 A2BD 883B 3C2F AF5C 004C 4990 77AE E603
+https://keybase.io/gamingrobot/key.asc
+```
+"""
+  avatar = "images/profile.png"
+  favicon = "favicon.png"
 
-## Social Accounts
-[params.social]
-    github = "gamingrobot"
-    linkedin = "morgancreekmore"
-    twitter = "gamingrobot"
-    stackoverflow = "1161491"
-    keybase = "gamingrobot"
-    email = "morgan@creekmore.email"
-
-## Main Menu
-[[menu.main]]
-    name = "Posts"
-    weight = 100
-    identifier = "posts"
-    url = "/posts/"
-[[menu.main]]
-    name = "About"
-    identifier = "about"
-    weight = 200
-    url = "/about/"
-[[menu.main]]
-    name = "Projects"
-    weight = 300
-    identifier = "projects"
-    url = "/projects/"
-[[menu.main]]
-    name = "Search"
-    identifier = "search"
-    weight = 400
-    url = "/search/"
+  [params.contact]
+    keybase = "https://keybase.io/gamingrobot"
+    stack-overflow = "https://stackoverflow.com/users/1161491"
+    linkedin = "https://www.linkedin.com/in/morgancreekmore"
+    twitter = "https://twitter.com/gamingrobot"
+    github = "https://github.com/gamingrobot"
