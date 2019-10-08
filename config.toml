@@ -29,6 +29,7 @@ https://keybase.io/gamingrobot/key.asc
 """
   avatar = "images/profile.png"
   favicon = "favicon.png"
+  error404 = "¯\\_(ツ)_/¯"
 
   [params.contact]
     keybase = "https://keybase.io/gamingrobot"
