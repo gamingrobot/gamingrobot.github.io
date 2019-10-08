@@ -3,48 +3,15 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://morgancreekmore.me/posts/floating-point-hell/</loc>
-    <lastmod>2014-03-16T13:33:19-05:00</lastmod>
+    <loc>https://morgancreekmore.me/categories/</loc>
   </url>
   
   <url>
     <loc>https://morgancreekmore.me/</loc>
-    <lastmod>2014-03-16T13:33:19-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://morgancreekmore.me/posts/</loc>
-    <lastmod>2014-03-16T13:33:19-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://morgancreekmore.me/posts/setup-qemu-for-arm-on-wheezy/</loc>
-    <lastmod>2014-01-01T13:33:39-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://morgancreekmore.me/about/</loc>
-  </url>
-  
-  <url>
-    <loc>https://morgancreekmore.me/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://morgancreekmore.me/projects/</loc>
-  </url>
-  
-  <url>
-    <loc>https://morgancreekmore.me/search/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://morgancreekmore.me/tags/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>
