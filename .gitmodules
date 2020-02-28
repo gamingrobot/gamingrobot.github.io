@@ -1,6 +1,3 @@
-[submodule "public"]
-	path = public
-	url = git@github.com:gamingrobot/gamingrobot.github.io.git
 [submodule "themes/vncnt-hugo"]
 	path = themes/vncnt-hugo
 	url = git@github.com:fncnt/vncnt-hugo.git
